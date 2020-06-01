@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-//  routes
+//  routes import
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
-//MY ROUTES
+//ROUTES
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", productRoutes);
